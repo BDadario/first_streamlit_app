@@ -28,7 +28,6 @@ fruit_choice = streamlit.text_input('What fruit would you like information about
 streamlit.write('The user entered ', fruit_choice)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-#streamlit.text(fruityvice_response.json()) # just writes the data to the screen # supposed to delete this line cause below list replace it.
 
 # take the json version of the response and normalize it.
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
